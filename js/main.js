@@ -16,6 +16,9 @@ const sendData = (username_Val, sucessRate, count) => {
   if (sucessRate === count) {
     alert("Registration SuccessFull");
     swal("Welcome " + username_Val, " Registration Successfull", "success");
+    setInterval(() => {
+      location.reload();
+    }, 1000);
   }
 };
 

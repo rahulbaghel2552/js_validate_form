@@ -16,7 +16,7 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url(../images/bg.jpg) no-repeat center;
   background-position: left;
   display: flex;
@@ -60,6 +60,7 @@ body {
   font-size: 16px;
   border-radius: 5px;
   border: 2px solid #ccc;
+  appearance: none;
 }
 
 .form {
@@ -76,8 +77,12 @@ body {
 input:focus {
   outline: none;
 }
-input[type=number] {
-   -webkit-appearance: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 .form_control {
   position: relative;
